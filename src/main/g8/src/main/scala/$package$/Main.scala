@@ -1,5 +1,8 @@
 package $package$
 
+import cats._
+import cats.implicits._
+
 import cats.effect.IOApp
 import cats.effect.IO
 
