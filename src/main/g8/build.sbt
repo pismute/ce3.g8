@@ -3,6 +3,9 @@ ThisBuild / scalaVersion := $if(scala3.truthy)$"3.0.0"$else$"2.13.5"$endif$
 
 lazy val root = (project in file(".")).settings(
   name := "$name;format="norm"$",
+  tpolecatDevModeOptions ~= { opts =>
+    opts.filterNot(Set(ScalacOptions.privateWarnUnusedImports))
+  },
   libraryDependencies ++= Seq(
     // "core" module - IO, IOApp, schedulers
     // This pulls in the kernel and std modules automatically.
