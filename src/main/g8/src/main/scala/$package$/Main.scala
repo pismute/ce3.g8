@@ -5,6 +5,7 @@ import cats.implicits._
 
 import cats.effect.IOApp
 import cats.effect.IO
+import cats.effect.implicits._
 
 object Main extends IOApp.Simple {
 
