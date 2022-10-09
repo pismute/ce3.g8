@@ -4,7 +4,7 @@ ThisBuild / scalaVersion := $if(scala3.truthy)$"3.0.0"$else$"2.13.5"$endif$
 lazy val root = (project in file(".")).settings(
   name := "$name;format="norm"$",
   addCompilerPlugin(("org.typelevel" %% "kind-projector" % "0.13.2").cross(CrossVersion.full)),
-  addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1"),  
+  addCompilerPlugin("com.olegpy" %% "better-monadic-for" % "0.3.1"),
   tpolecatDevModeOptions ~= { opts =>
     opts.filterNot(Set(ScalacOptions.privateWarnUnusedImports))
   },
